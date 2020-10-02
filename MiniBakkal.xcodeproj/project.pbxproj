@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DAFD00521730632C31C90A2 /* Pods_MiniBakkal_MiniBakkalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81572F0AAF258A6FBC3400C2 /* Pods_MiniBakkal_MiniBakkalUITests.framework */; };
+		8389B4500F7330666F513B47 /* Pods_MiniBakkalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57103DA097285B2D153030A7 /* Pods_MiniBakkalTests.framework */; };
+		86DCA01125D610CFB3D9D5EA /* Pods_MiniBakkal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908C64AC0D6AD9DC8B046187 /* Pods_MiniBakkal.framework */; };
 		B331736725275E0D00328DED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331736625275E0D00328DED /* AppDelegate.swift */; };
 		B331736925275E0D00328DED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331736825275E0D00328DED /* SceneDelegate.swift */; };
 		B331736B25275E0D00328DED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331736A25275E0D00328DED /* ViewController.swift */; };
@@ -15,6 +18,9 @@
 		B331737325275E1700328DED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B331737125275E1700328DED /* LaunchScreen.storyboard */; };
 		B331737E25275E1700328DED /* MiniBakkalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331737D25275E1700328DED /* MiniBakkalTests.swift */; };
 		B331738925275E1700328DED /* MiniBakkalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331738825275E1700328DED /* MiniBakkalUITests.swift */; };
+		B331739825276A0800328DED /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331739725276A0800328DED /* APIClient.swift */; };
+		B331739A25276A2A00328DED /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331739925276A2A00328DED /* APIRouter.swift */; };
+		B331739C25276A4500328DED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331739B25276A4500328DED /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F652C6736DDAD1C7A7F8C97 /* Pods-MiniBakkal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniBakkal.release.xcconfig"; path = "Target Support Files/Pods-MiniBakkal/Pods-MiniBakkal.release.xcconfig"; sourceTree = "<group>"; };
+		4C23565FA83C6532BBBB8B76 /* Pods-MiniBakkalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniBakkalTests.release.xcconfig"; path = "Target Support Files/Pods-MiniBakkalTests/Pods-MiniBakkalTests.release.xcconfig"; sourceTree = "<group>"; };
+		51D1F004AF615DE68F3ABB2B /* Pods-MiniBakkal-MiniBakkalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniBakkal-MiniBakkalUITests.release.xcconfig"; path = "Target Support Files/Pods-MiniBakkal-MiniBakkalUITests/Pods-MiniBakkal-MiniBakkalUITests.release.xcconfig"; sourceTree = "<group>"; };
+		57103DA097285B2D153030A7 /* Pods_MiniBakkalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniBakkalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		673BFE2A347E5DAAF80E17F2 /* Pods-MiniBakkal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniBakkal.debug.xcconfig"; path = "Target Support Files/Pods-MiniBakkal/Pods-MiniBakkal.debug.xcconfig"; sourceTree = "<group>"; };
+		7BC122240FEF6762B156C0A0 /* Pods-MiniBakkal-MiniBakkalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniBakkal-MiniBakkalUITests.debug.xcconfig"; path = "Target Support Files/Pods-MiniBakkal-MiniBakkalUITests/Pods-MiniBakkal-MiniBakkalUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		81572F0AAF258A6FBC3400C2 /* Pods_MiniBakkal_MiniBakkalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniBakkal_MiniBakkalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		908C64AC0D6AD9DC8B046187 /* Pods_MiniBakkal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniBakkal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A60FDB75044677DF6F78AB11 /* Pods-MiniBakkalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniBakkalTests.debug.xcconfig"; path = "Target Support Files/Pods-MiniBakkalTests/Pods-MiniBakkalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B331736325275E0D00328DED /* MiniBakkal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniBakkal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B331736625275E0D00328DED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B331736825275E0D00328DED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +64,9 @@
 		B331738425275E1700328DED /* MiniBakkalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniBakkalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B331738825275E1700328DED /* MiniBakkalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniBakkalUITests.swift; sourceTree = "<group>"; };
 		B331738A25275E1700328DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B331739725276A0800328DED /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		B331739925276A2A00328DED /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		B331739B25276A4500328DED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86DCA01125D610CFB3D9D5EA /* Pods_MiniBakkal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8389B4500F7330666F513B47 /* Pods_MiniBakkalTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,19 +90,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DAFD00521730632C31C90A2 /* Pods_MiniBakkal_MiniBakkalUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		783971DBB419068CAE04B073 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				908C64AC0D6AD9DC8B046187 /* Pods_MiniBakkal.framework */,
+				81572F0AAF258A6FBC3400C2 /* Pods_MiniBakkal_MiniBakkalUITests.framework */,
+				57103DA097285B2D153030A7 /* Pods_MiniBakkalTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B31E646471C390DD7FC35406 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				673BFE2A347E5DAAF80E17F2 /* Pods-MiniBakkal.debug.xcconfig */,
+				1F652C6736DDAD1C7A7F8C97 /* Pods-MiniBakkal.release.xcconfig */,
+				7BC122240FEF6762B156C0A0 /* Pods-MiniBakkal-MiniBakkalUITests.debug.xcconfig */,
+				51D1F004AF615DE68F3ABB2B /* Pods-MiniBakkal-MiniBakkalUITests.release.xcconfig */,
+				A60FDB75044677DF6F78AB11 /* Pods-MiniBakkalTests.debug.xcconfig */,
+				4C23565FA83C6532BBBB8B76 /* Pods-MiniBakkalTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B331735A25275E0D00328DED = {
 			isa = PBXGroup;
 			children = (
+				B3317396252769E800328DED /* Network */,
 				B331736525275E0D00328DED /* MiniBakkal */,
 				B331737C25275E1700328DED /* MiniBakkalTests */,
 				B331738725275E1700328DED /* MiniBakkalUITests */,
 				B331736425275E0D00328DED /* Products */,
+				B31E646471C390DD7FC35406 /* Pods */,
+				783971DBB419068CAE04B073 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +175,16 @@
 			path = MiniBakkalUITests;
 			sourceTree = "<group>";
 		};
+		B3317396252769E800328DED /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B331739725276A0800328DED /* APIClient.swift */,
+				B331739925276A2A00328DED /* APIRouter.swift */,
+				B331739B25276A4500328DED /* Constants.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B331738D25275E1700328DED /* Build configuration list for PBXNativeTarget "MiniBakkal" */;
 			buildPhases = (
+				E1347AE29A5D626015BEBEF8 /* [CP] Check Pods Manifest.lock */,
 				B331735F25275E0D00328DED /* Sources */,
 				B331736025275E0D00328DED /* Frameworks */,
 				B331736125275E0D00328DED /* Resources */,
+				A307485C906190DD5C5E3526 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +211,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B331739025275E1700328DED /* Build configuration list for PBXNativeTarget "MiniBakkalTests" */;
 			buildPhases = (
+				D77E60B253E3F92A8DF54675 /* [CP] Check Pods Manifest.lock */,
 				B331737525275E1700328DED /* Sources */,
 				B331737625275E1700328DED /* Frameworks */,
 				B331737725275E1700328DED /* Resources */,
@@ -170,9 +230,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B331739325275E1700328DED /* Build configuration list for PBXNativeTarget "MiniBakkalUITests" */;
 			buildPhases = (
+				4AC84608B12EFE5BAF2B1227 /* [CP] Check Pods Manifest.lock */,
 				B331738025275E1700328DED /* Sources */,
 				B331738125275E1700328DED /* Frameworks */,
 				B331738225275E1700328DED /* Resources */,
+				CD404DDF3794954CC02200B0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,14 +316,120 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4AC84608B12EFE5BAF2B1227 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiniBakkal-MiniBakkalUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A307485C906190DD5C5E3526 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiniBakkal/Pods-MiniBakkal-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiniBakkal/Pods-MiniBakkal-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MiniBakkal/Pods-MiniBakkal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD404DDF3794954CC02200B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiniBakkal-MiniBakkalUITests/Pods-MiniBakkal-MiniBakkalUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiniBakkal-MiniBakkalUITests/Pods-MiniBakkal-MiniBakkalUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MiniBakkal-MiniBakkalUITests/Pods-MiniBakkal-MiniBakkalUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D77E60B253E3F92A8DF54675 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiniBakkalTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1347AE29A5D626015BEBEF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiniBakkal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B331735F25275E0D00328DED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B331736B25275E0D00328DED /* ViewController.swift in Sources */,
+				B331739A25276A2A00328DED /* APIRouter.swift in Sources */,
 				B331736725275E0D00328DED /* AppDelegate.swift in Sources */,
 				B331736925275E0D00328DED /* SceneDelegate.swift in Sources */,
+				B331739825276A0800328DED /* APIClient.swift in Sources */,
+				B331739C25276A4500328DED /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +600,7 @@
 		};
 		B331738E25275E1700328DED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 673BFE2A347E5DAAF80E17F2 /* Pods-MiniBakkal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +618,7 @@
 		};
 		B331738F25275E1700328DED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F652C6736DDAD1C7A7F8C97 /* Pods-MiniBakkal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +636,7 @@
 		};
 		B331739125275E1700328DED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A60FDB75044677DF6F78AB11 /* Pods-MiniBakkalTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +658,7 @@
 		};
 		B331739225275E1700328DED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C23565FA83C6532BBBB8B76 /* Pods-MiniBakkalTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +680,7 @@
 		};
 		B331739425275E1700328DED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BC122240FEF6762B156C0A0 /* Pods-MiniBakkal-MiniBakkalUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +700,7 @@
 		};
 		B331739525275E1700328DED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51D1F004AF615DE68F3ABB2B /* Pods-MiniBakkal-MiniBakkalUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
