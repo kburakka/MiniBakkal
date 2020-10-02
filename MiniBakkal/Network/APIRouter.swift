@@ -11,7 +11,7 @@ import Alamofire
 
 enum APIRouter: URLRequestConvertible {
     
-    case checkout
+    case checkout(checkoutReq : ChekoutReq)
     case groseryList
 
     
@@ -22,6 +22,21 @@ enum APIRouter: URLRequestConvertible {
             return .post
         case .groseryList:
             return .get
+        }
+    }
+    
+    // MARK: - HTTPBody
+    private var body: Data?{
+        switch self {
+        case .checkout(let checkoutReq):
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(checkoutReq) {
+                return encoded
+            }else{
+                return nil
+            }
+        case .groseryList:
+            return nil
         }
     }
     
@@ -45,7 +60,9 @@ enum APIRouter: URLRequestConvertible {
         urlRequest.httpMethod = method.rawValue
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptType.rawValue)
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
-        
+        if let body = body{
+            urlRequest.httpBody = body
+        }
         return urlRequest
     }
 }

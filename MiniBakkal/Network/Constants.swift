@@ -9,11 +9,6 @@
 import Foundation
 import Alamofire
 
-protocol APIConfiguration: URLRequestConvertible {
-    var method: HTTPMethod { get }
-    var path: String { get }
-}
-
 struct ProductionServer {
     static let baseUrl = "https://desolate-shelf-18786.herokuapp.com/"}
 

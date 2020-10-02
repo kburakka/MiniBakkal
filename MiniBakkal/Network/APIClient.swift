@@ -10,9 +10,23 @@ import Foundation
 import Alamofire
 
 public protocol APIClientProtocol {
+    func fetchGroserylist(completion:@escaping (Result<[Product], AFError>)->Void)
+    func checkout(chekoutReq: ChekoutReq,completion:@escaping (Result<CheckoutRes, AFError>)->Void)
 }
 
 class APIClient: APIClientProtocol {
+    func fetchGroserylist(completion: @escaping (Result<[Product], AFError>) -> Void) {
+        APIClient.performRequest(route: APIRouter.groseryList) { (result) in
+            completion(result)
+        }
+    }
+    
+    func checkout(chekoutReq: ChekoutReq, completion: @escaping (Result<CheckoutRes, AFError>) -> Void) {
+        APIClient.performRequest(route: APIRouter.checkout(checkoutReq: chekoutReq)) { (result) in
+            completion(result)
+        }
+    }
+    
     @discardableResult
     public static func performRequest<T:Decodable>(route:APIRouter, decoder: JSONDecoder = JSONDecoder(), completion:@escaping (Result<T, AFError>)->Void) -> DataRequest {
         return AF.request(route)
