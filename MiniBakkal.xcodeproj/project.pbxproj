@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B331736725275E0D00328DED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331736625275E0D00328DED /* AppDelegate.swift */; };
+		B331736925275E0D00328DED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331736825275E0D00328DED /* SceneDelegate.swift */; };
+		B331736B25275E0D00328DED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331736A25275E0D00328DED /* ViewController.swift */; };
+		B331736E25275E0D00328DED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B331736C25275E0D00328DED /* Main.storyboard */; };
+		B331737025275E1700328DED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B331736F25275E1700328DED /* Assets.xcassets */; };
+		B331737325275E1700328DED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B331737125275E1700328DED /* LaunchScreen.storyboard */; };
+		B331737E25275E1700328DED /* MiniBakkalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331737D25275E1700328DED /* MiniBakkalTests.swift */; };
+		B331738925275E1700328DED /* MiniBakkalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331738825275E1700328DED /* MiniBakkalUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B331737A25275E1700328DED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B331735B25275E0D00328DED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B331736225275E0D00328DED;
+			remoteInfo = MiniBakkal;
+		};
+		B331738525275E1700328DED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B331735B25275E0D00328DED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B331736225275E0D00328DED;
+			remoteInfo = MiniBakkal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B331736325275E0D00328DED /* MiniBakkal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniBakkal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B331736625275E0D00328DED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B331736825275E0D00328DED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B331736A25275E0D00328DED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B331736D25275E0D00328DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B331736F25275E1700328DED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B331737225275E1700328DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B331737425275E1700328DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B331737925275E1700328DED /* MiniBakkalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniBakkalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B331737D25275E1700328DED /* MiniBakkalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniBakkalTests.swift; sourceTree = "<group>"; };
+		B331737F25275E1700328DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B331738425275E1700328DED /* MiniBakkalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniBakkalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B331738825275E1700328DED /* MiniBakkalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniBakkalUITests.swift; sourceTree = "<group>"; };
+		B331738A25275E1700328DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B331736025275E0D00328DED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B331737625275E1700328DED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B331738125275E1700328DED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B331735A25275E0D00328DED = {
+			isa = PBXGroup;
+			children = (
+				B331736525275E0D00328DED /* MiniBakkal */,
+				B331737C25275E1700328DED /* MiniBakkalTests */,
+				B331738725275E1700328DED /* MiniBakkalUITests */,
+				B331736425275E0D00328DED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B331736425275E0D00328DED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B331736325275E0D00328DED /* MiniBakkal.app */,
+				B331737925275E1700328DED /* MiniBakkalTests.xctest */,
+				B331738425275E1700328DED /* MiniBakkalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B331736525275E0D00328DED /* MiniBakkal */ = {
+			isa = PBXGroup;
+			children = (
+				B331736625275E0D00328DED /* AppDelegate.swift */,
+				B331736825275E0D00328DED /* SceneDelegate.swift */,
+				B331736A25275E0D00328DED /* ViewController.swift */,
+				B331736C25275E0D00328DED /* Main.storyboard */,
+				B331736F25275E1700328DED /* Assets.xcassets */,
+				B331737125275E1700328DED /* LaunchScreen.storyboard */,
+				B331737425275E1700328DED /* Info.plist */,
+			);
+			path = MiniBakkal;
+			sourceTree = "<group>";
+		};
+		B331737C25275E1700328DED /* MiniBakkalTests */ = {
+			isa = PBXGroup;
+			children = (
+				B331737D25275E1700328DED /* MiniBakkalTests.swift */,
+				B331737F25275E1700328DED /* Info.plist */,
+			);
+			path = MiniBakkalTests;
+			sourceTree = "<group>";
+		};
+		B331738725275E1700328DED /* MiniBakkalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B331738825275E1700328DED /* MiniBakkalUITests.swift */,
+				B331738A25275E1700328DED /* Info.plist */,
+			);
+			path = MiniBakkalUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B331736225275E0D00328DED /* MiniBakkal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B331738D25275E1700328DED /* Build configuration list for PBXNativeTarget "MiniBakkal" */;
+			buildPhases = (
+				B331735F25275E0D00328DED /* Sources */,
+				B331736025275E0D00328DED /* Frameworks */,
+				B331736125275E0D00328DED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiniBakkal;
+			productName = MiniBakkal;
+			productReference = B331736325275E0D00328DED /* MiniBakkal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B331737825275E1700328DED /* MiniBakkalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B331739025275E1700328DED /* Build configuration list for PBXNativeTarget "MiniBakkalTests" */;
+			buildPhases = (
+				B331737525275E1700328DED /* Sources */,
+				B331737625275E1700328DED /* Frameworks */,
+				B331737725275E1700328DED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B331737B25275E1700328DED /* PBXTargetDependency */,
+			);
+			name = MiniBakkalTests;
+			productName = MiniBakkalTests;
+			productReference = B331737925275E1700328DED /* MiniBakkalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B331738325275E1700328DED /* MiniBakkalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B331739325275E1700328DED /* Build configuration list for PBXNativeTarget "MiniBakkalUITests" */;
+			buildPhases = (
+				B331738025275E1700328DED /* Sources */,
+				B331738125275E1700328DED /* Frameworks */,
+				B331738225275E1700328DED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B331738625275E1700328DED /* PBXTargetDependency */,
+			);
+			name = MiniBakkalUITests;
+			productName = MiniBakkalUITests;
+			productReference = B331738425275E1700328DED /* MiniBakkalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B331735B25275E0D00328DED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Burak KAYA";
+				TargetAttributes = {
+					B331736225275E0D00328DED = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					B331737825275E1700328DED = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = B331736225275E0D00328DED;
+					};
+					B331738325275E1700328DED = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = B331736225275E0D00328DED;
+					};
+				};
+			};
+			buildConfigurationList = B331735E25275E0D00328DED /* Build configuration list for PBXProject "MiniBakkal" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B331735A25275E0D00328DED;
+			productRefGroup = B331736425275E0D00328DED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B331736225275E0D00328DED /* MiniBakkal */,
+				B331737825275E1700328DED /* MiniBakkalTests */,
+				B331738325275E1700328DED /* MiniBakkalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B331736125275E0D00328DED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B331737325275E1700328DED /* LaunchScreen.storyboard in Resources */,
+				B331737025275E1700328DED /* Assets.xcassets in Resources */,
+				B331736E25275E0D00328DED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B331737725275E1700328DED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B331738225275E1700328DED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B331735F25275E0D00328DED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B331736B25275E0D00328DED /* ViewController.swift in Sources */,
+				B331736725275E0D00328DED /* AppDelegate.swift in Sources */,
+				B331736925275E0D00328DED /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B331737525275E1700328DED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B331737E25275E1700328DED /* MiniBakkalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B331738025275E1700328DED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B331738925275E1700328DED /* MiniBakkalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B331737B25275E1700328DED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B331736225275E0D00328DED /* MiniBakkal */;
+			targetProxy = B331737A25275E1700328DED /* PBXContainerItemProxy */;
+		};
+		B331738625275E1700328DED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B331736225275E0D00328DED /* MiniBakkal */;
+			targetProxy = B331738525275E1700328DED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B331736C25275E0D00328DED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B331736D25275E0D00328DED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B331737125275E1700328DED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B331737225275E1700328DED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B331738B25275E1700328DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B331738C25275E1700328DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B331738E25275E1700328DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiniBakkal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.burakka.MiniBakkal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B331738F25275E1700328DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiniBakkal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.burakka.MiniBakkal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B331739125275E1700328DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiniBakkalTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.burakka.MiniBakkalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniBakkal.app/MiniBakkal";
+			};
+			name = Debug;
+		};
+		B331739225275E1700328DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiniBakkalTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.burakka.MiniBakkalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniBakkal.app/MiniBakkal";
+			};
+			name = Release;
+		};
+		B331739425275E1700328DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiniBakkalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.burakka.MiniBakkalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MiniBakkal;
+			};
+			name = Debug;
+		};
+		B331739525275E1700328DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiniBakkalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.burakka.MiniBakkalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MiniBakkal;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B331735E25275E0D00328DED /* Build configuration list for PBXProject "MiniBakkal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B331738B25275E1700328DED /* Debug */,
+				B331738C25275E1700328DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B331738D25275E1700328DED /* Build configuration list for PBXNativeTarget "MiniBakkal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B331738E25275E1700328DED /* Debug */,
+				B331738F25275E1700328DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B331739025275E1700328DED /* Build configuration list for PBXNativeTarget "MiniBakkalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B331739125275E1700328DED /* Debug */,
+				B331739225275E1700328DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B331739325275E1700328DED /* Build configuration list for PBXNativeTarget "MiniBakkalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B331739425275E1700328DED /* Debug */,
+				B331739525275E1700328DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B331735B25275E0D00328DED /* Project object */;
+}
