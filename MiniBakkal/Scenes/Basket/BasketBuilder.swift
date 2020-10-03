@@ -12,7 +12,7 @@ final class BasketBuilder {
     static func make(with products : [Product]) -> BasketViewController {
         let storyboard = UIStoryboard(name: "Basket", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: "BasketViewController") as! BasketViewController
-        view.products = products
+        view.selectedProducts = products
         let router = BasketRouter(view: view)
         let interactor = BasketInteractor(service: app.service)
         let presenter = BasketPresenter(view: view,

@@ -43,6 +43,8 @@
 		B33173D825285EA600328DED /* BasketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33173D725285EA600328DED /* BasketPresenter.swift */; };
 		B33173DA25285EC500328DED /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33173D925285EC500328DED /* BasketViewController.swift */; };
 		B33173DC25285ECF00328DED /* Basket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33173DB25285ECF00328DED /* Basket.storyboard */; };
+		B391F56D252876A100DB9743 /* BasketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B391F56B252876A100DB9743 /* BasketCell.swift */; };
+		B391F56E252876A100DB9743 /* BasketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B391F56C252876A100DB9743 /* BasketCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		B33173D725285EA600328DED /* BasketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketPresenter.swift; sourceTree = "<group>"; };
 		B33173D925285EC500328DED /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
 		B33173DB25285ECF00328DED /* Basket.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Basket.storyboard; sourceTree = "<group>"; };
+		B391F56B252876A100DB9743 /* BasketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketCell.swift; sourceTree = "<group>"; };
+		B391F56C252876A100DB9743 /* BasketCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +308,7 @@
 		B33173CE25285E4300328DED /* Basket */ = {
 			isa = PBXGroup;
 			children = (
+				B391F56A2528767E00DB9743 /* BasketCell */,
 				B33173CF25285E5E00328DED /* BasketContracts.swift */,
 				B33173D125285E6B00328DED /* BasketBuilder.swift */,
 				B33173D325285E8500328DED /* BasketInteractor.swift */,
@@ -313,6 +318,15 @@
 				B33173DB25285ECF00328DED /* Basket.storyboard */,
 			);
 			path = Basket;
+			sourceTree = "<group>";
+		};
+		B391F56A2528767E00DB9743 /* BasketCell */ = {
+			isa = PBXGroup;
+			children = (
+				B391F56B252876A100DB9743 /* BasketCell.swift */,
+				B391F56C252876A100DB9743 /* BasketCell.xib */,
+			);
+			path = BasketCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B331737325275E1700328DED /* LaunchScreen.storyboard in Resources */,
+				B391F56E252876A100DB9743 /* BasketCell.xib in Resources */,
 				B33173B62527850C00328DED /* GroseryList.storyboard in Resources */,
 				B331737025275E1700328DED /* Assets.xcassets in Resources */,
 				B33173DC25285ECF00328DED /* Basket.storyboard in Resources */,
@@ -557,6 +572,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B33173AE2527847D00328DED /* GroseryListInteractor.swift in Sources */,
+				B391F56D252876A100DB9743 /* BasketCell.swift in Sources */,
 				B33173BA25278BA600328DED /* AppContainer.swift in Sources */,
 				B33173DA25285EC500328DED /* BasketViewController.swift in Sources */,
 				B33173D025285E5E00328DED /* BasketContracts.swift in Sources */,
