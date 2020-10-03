@@ -35,6 +35,7 @@
 		B33173C32527A24B00328DED /* GroseryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B33173C12527A24B00328DED /* GroseryCell.xib */; };
 		B33173C825285AED00328DED /* BadgedButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33173C725285AED00328DED /* BadgedButtonItem.swift */; };
 		B33173CA25285CD400328DED /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33173C925285CD400328DED /* LoadingView.swift */; };
+		B33173CD25285D5C00328DED /* UiViewControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33173CC25285D5C00328DED /* UiViewControllerEx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		B33173C12527A24B00328DED /* GroseryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroseryCell.xib; sourceTree = "<group>"; };
 		B33173C725285AED00328DED /* BadgedButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgedButtonItem.swift; sourceTree = "<group>"; };
 		B33173C925285CD400328DED /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		B33173CC25285D5C00328DED /* UiViewControllerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewControllerEx.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,10 +271,19 @@
 		B33173C42527CA4D00328DED /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				B33173CB25285D3800328DED /* Extension */,
 				B33173C725285AED00328DED /* BadgedButtonItem.swift */,
 				B33173C925285CD400328DED /* LoadingView.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		B33173CB25285D3800328DED /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B33173CC25285D5C00328DED /* UiViewControllerEx.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -520,6 +531,7 @@
 				B331739A25276A2A00328DED /* APIRouter.swift in Sources */,
 				B33173AA2527845C00328DED /* GroseryListBuilder.swift in Sources */,
 				B33173C22527A24B00328DED /* GroseryCell.swift in Sources */,
+				B33173CD25285D5C00328DED /* UiViewControllerEx.swift in Sources */,
 				B33173C825285AED00328DED /* BadgedButtonItem.swift in Sources */,
 				B33173A52527724E00328DED /* CheckoutReq.swift in Sources */,
 				B33173B2252784BB00328DED /* GroseryListRouter.swift in Sources */,

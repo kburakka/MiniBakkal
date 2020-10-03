@@ -66,7 +66,7 @@ class GroseryListViewController: UIViewController, GroseryListViewProtocol {
                 self.collectionView.reloadData()
             }
         case .showError(let error):
-            print("error")
+            self.showAlert(title: "Error", message: error.localizedDescription)
         }
     }
 }
