@@ -10,6 +10,10 @@ import UIKit
 
 class GroseryListViewController: UIViewController {
     
+    private var products: [Product] = []
+    var presenter : GroseryListPresenterProtocol!
+    let cartBtn = BadgedButtonItem(with: UIImage(systemName: "cart"))
+    
     fileprivate let collectionView:UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
@@ -22,24 +26,23 @@ class GroseryListViewController: UIViewController {
         return cv
     }()
     
-    var presenter : GroseryListPresenterProtocol!
-    private var products: [Product] = []
-    private var selectedProducts: [Product] = []{
+    var selectedProducts: [Product] = []{
         didSet{
             cartBtn.setBadge(with: selectedProducts.count)
         }
     }
 
-    let cartBtn = BadgedButtonItem(with: UIImage(systemName: "cart"))
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setCollectionView()
-        presenter.showProducts()
         
         cartBtn.delegate = self
         self.navigationItem.rightBarButtonItem = cartBtn
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        presenter.showProducts()
     }
     
     func setCollectionView(){
@@ -83,6 +86,7 @@ extension GroseryListViewController: UICollectionViewDelegateFlowLayout, UIColle
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GroseryCell", for: indexPath) as! GroseryCell
         if products.count > indexPath.item{
             cell.configure(product: products[indexPath.item])
+            cell.setCounter(counter: selectedProducts.filter({$0.id == products[indexPath.item].id}).count)
             cell.delegate = self
         }
         return cell

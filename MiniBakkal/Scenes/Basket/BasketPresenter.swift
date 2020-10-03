@@ -9,6 +9,8 @@
 import UIKit
 
 final class BasketPresenter:BasketPresenterProtocol{
+
+    
     
     private unowned let view: BasketViewProtocol
     private let interactor: BasketInteractorProtocol
@@ -23,8 +25,8 @@ final class BasketPresenter:BasketPresenterProtocol{
          self.interactor.delegate = self
     }
     
-    func showBasket() {
-        
+    func closeBasket(products: [Product]) {
+        router.navigate(to: .closeBasket(products))
     }
 }
 
@@ -33,8 +35,6 @@ extension BasketPresenter: BasketInteractorDelegate{
         switch output {
         case .setLoading(let isLoading):
             view.handleOutput(.setLoading(isLoading))
-        case .showBasket(let basket):
-            view.handleOutput(.showBasket(basket))
         case .showError(let error):
             view.handleOutput(.showError(error))
         }

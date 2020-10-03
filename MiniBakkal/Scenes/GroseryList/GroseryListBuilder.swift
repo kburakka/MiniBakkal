@@ -9,9 +9,12 @@
 import UIKit
 
 final class GroseryListBuilder {
-    static func make() -> GroseryListViewController {
+    static func make(with products : [Product]?) -> GroseryListViewController {
         let storyboard = UIStoryboard(name: "GroseryList", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: "GroseryListViewController") as! GroseryListViewController
+        if let products = products{
+            view.selectedProducts = products
+        }
         let router = GroseryListRouter(view: view)
         let interactor = GroseryListInteractor(service: app.service)
         let presenter = GroseryListPresenter(view: view,

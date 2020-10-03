@@ -16,6 +16,10 @@ final class BasketRouter : BasketRouterProtocol{
     }
     
     func navigate(to route: EBasketRouter) {
-        
+        switch route {
+        case .closeBasket(let products):
+            let commentsView = GroseryListBuilder.make(with: products)
+            view.show(commentsView, sender: nil)
+        }
     }
 }

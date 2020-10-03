@@ -13,12 +13,10 @@ import UIKit
 // MARK: - Interactor
 protocol BasketInteractorProtocol: class {
     var delegate: BasketInteractorDelegate? { get set }
-    func showBasket()
 }
 
 enum BasketInteractorOutput {
     case setLoading(Bool)
-    case showBasket(ChekoutReq)
     case showError(Error)
 }
 
@@ -29,12 +27,12 @@ protocol BasketInteractorDelegate: class {
 
 // MARK: - Presenter
 protocol BasketPresenterProtocol: class {
-    func showBasket()
+    func closeBasket(products : [Product])
 }
 
 enum BasketPresenterOutput {
     case setLoading(Bool)
-    case showBasket(ChekoutReq)
+    case closeBasket([Product])
     case showError(Error)
 }
 
@@ -47,6 +45,7 @@ protocol BasketViewProtocol: class {
 
 // MARK: - Router
 enum EBasketRouter{
+    case closeBasket([Product])
 }
 
 protocol BasketRouterProtocol: class {

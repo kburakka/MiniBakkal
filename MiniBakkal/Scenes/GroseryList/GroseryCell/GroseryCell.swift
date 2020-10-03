@@ -48,6 +48,9 @@ class GroseryCell: UICollectionViewCell {
         // Initialization code
     }
     
+    func setCounter(counter : Int){
+        self.counter = counter
+    }
     @IBAction func addProduct(_ sender: Any) {
         counter += 1
         if let product = product{

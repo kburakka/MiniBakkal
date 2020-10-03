@@ -17,7 +17,7 @@ final class AppRouter {
     }
     
     func start() {
-        let viewController = GroseryListBuilder.make()
+        let viewController = GroseryListBuilder.make(with: nil)
         let navigationController = UINavigationController(rootViewController: viewController)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

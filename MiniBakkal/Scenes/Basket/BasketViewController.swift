@@ -14,20 +14,65 @@ class BasketViewController: UIViewController {
     public var selectedProducts : [Product] = []{
         didSet{
             updateTotalPrice()
+            updateGroupedItems()
         }
     }
-    var groupedItems : [String : [Product]?] = [:]
+    var groupedItems : [String : [Product]?] = [:]{
+        didSet{
+            if Array(oldValue.keys).count != Array(groupedItems.keys).count{
+                if tableView != nil{
+                    tableView.reloadData()
+                }
+            }
+        }
+    }
 
     @IBOutlet weak var totalPrice: UILabel!{
         didSet{
             updateTotalPrice()
         }
     }
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         groupedItems = Dictionary(grouping: selectedProducts, by: {$0.id!})
+        
+        setNavigationItems()
+    }
+    
+    func setNavigationItems(){
+    
+        let deleteBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        deleteBtn.titleLabel?.font = UIFont(name: "Arial-BoldMT", size: 16)
+        deleteBtn.setTitle("Sil", for: .normal)
+        deleteBtn.titleLabel?.textAlignment = .center
+        deleteBtn.setTitleColor(.red, for: .normal)
+        deleteBtn.backgroundColor = .clear
+        deleteBtn.addTarget(self, action: #selector(deleteAllProducts), for: .touchUpInside)
+        let barDeleteBtn = UIBarButtonItem(customView: deleteBtn)
+
+        self.navigationItem.leftBarButtonItem = barDeleteBtn
+        
+        let closeBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        closeBtn.titleLabel?.font = UIFont(name: "Arial-BoldMT", size: 16)
+        closeBtn.setTitle("Kapat", for: .normal)
+        closeBtn.titleLabel?.textAlignment = .center
+        closeBtn.setTitleColor(.systemBlue, for: .normal)
+        closeBtn.backgroundColor = .clear
+        closeBtn.addTarget(self, action: #selector(closeBasket), for: .touchUpInside)
+        let barCloseBtn = UIBarButtonItem(customView: closeBtn)
+
+        self.navigationItem.rightBarButtonItem = barCloseBtn
+    }
+    
+    @objc func deleteAllProducts(){
+        selectedProducts.removeAll()
+    }
+    
+    @objc func closeBasket(){
+        presenter.closeBasket(products: selectedProducts)
     }
     
     func updateTotalPrice(){
@@ -35,6 +80,12 @@ class BasketViewController: UIViewController {
             totalPrice.text = "\(selectedProducts.map({$0.price ?? 0.0}).reduce(0.0, +))"
         }
     }
+    
+    func updateGroupedItems(){
+        groupedItems = Dictionary(grouping: selectedProducts, by: {$0.id!})
+    }
+    
+    
     @IBAction func confirmCart(_ sender: Any) {
     }
 }
@@ -48,12 +99,14 @@ extension BasketViewController: BasketViewProtocol{
 extension BasketViewController: BasketCellProtocol{
     func productAdded(product: Product) {
         selectedProducts.append(product)
-        groupedItems = Dictionary(grouping: selectedProducts, by: {$0.id!})
+        updateGroupedItems()
     }
     
     func productDeleted(product: Product) {
-        selectedProducts = selectedProducts.filter { $0.id != product.id }
-        groupedItems = Dictionary(grouping: selectedProducts, by: {$0.id!})
+        if let index = selectedProducts.firstIndex(where: {$0.id == product.id}){
+            selectedProducts.remove(at: index)
+        }
+        updateGroupedItems()
     }
 }
 
