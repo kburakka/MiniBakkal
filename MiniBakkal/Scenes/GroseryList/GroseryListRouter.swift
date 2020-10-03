@@ -18,9 +18,9 @@ final class GroseryListRouter : GroseryListRouterProtocol{
     
     func navigate(to route: EGroseryListRouter) {
         switch route {
-        case .checkOut(let products): break
-//            let commentsView = CommentsBuilder.make(with: image, id: id)
-//            view.show(commentsView, sender: nil)
+        case .checkOut(let products):
+            let commentsView = BasketBuilder.make(with: products)
+            view.show(commentsView, sender: nil)
         }
     }
 }

@@ -30,6 +30,7 @@ protocol GroseryListInteractorDelegate: class {
 // MARK: - Presenter
 protocol GroseryListPresenterProtocol: class {
     func showProducts()
+    func checkOut(products: [Product])
 }
 
 enum GroseryListPresenterOutput {

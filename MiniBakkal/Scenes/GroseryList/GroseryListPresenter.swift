@@ -27,6 +27,11 @@ final class GroseryListPresenter:GroseryListPresenterProtocol{
     func showProducts() {
         interactor.showGroseryList()
     }
+    
+    func checkOut(products: [Product]) {
+        router.navigate(to: .checkOut(products))
+    }
+    
 }
 
 extension GroseryListPresenter: GroseryListInteractorDelegate{

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GroseryListViewController: UIViewController, GroseryListViewProtocol {
+class GroseryListViewController: UIViewController {
     
     fileprivate let collectionView:UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -24,13 +24,14 @@ class GroseryListViewController: UIViewController, GroseryListViewProtocol {
     
     var presenter : GroseryListPresenterProtocol!
     private var products: [Product] = []
-    let cartBtn = BadgedButtonItem(with: UIImage(systemName: "cart"))
-    
-    var totalCounter = 0{
+    private var selectedProducts: [Product] = []{
         didSet{
-            cartBtn.setBadge(with: totalCounter)
+            cartBtn.setBadge(with: selectedProducts.count)
         }
     }
+
+    let cartBtn = BadgedButtonItem(with: UIImage(systemName: "cart"))
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +52,9 @@ class GroseryListViewController: UIViewController, GroseryListViewProtocol {
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
     }
-    
+}
+
+extension GroseryListViewController:GroseryListViewProtocol{
     func handleOutput(_ output: GroseryListPresenterOutput) {
         switch output {
         case .setLoading(let isLoading):
@@ -87,17 +90,17 @@ extension GroseryListViewController: UICollectionViewDelegateFlowLayout, UIColle
 }
 
 extension GroseryListViewController: GroseryCellProtocol{
-    func productAdded() {
-        totalCounter += 1
+    func productAdded(product: Product) {
+        selectedProducts.append(product)
     }
     
-    func productDeleted() {
-        totalCounter -= 1
+    func productDeleted(product: Product) {
+        selectedProducts = selectedProducts.filter { $0.id != product.id }
     }
 }
 
 extension GroseryListViewController: BadgedButtonProtocol{
     func cartOnPressed() {
-        print("basildi")
+        presenter.checkOut(products: selectedProducts)
     }
 }

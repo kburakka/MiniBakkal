@@ -10,12 +10,12 @@ import UIKit
 import SDWebImage
 
 protocol GroseryCellProtocol: class {
-    func productAdded()
-    func productDeleted()
+    func productAdded(product : Product)
+    func productDeleted(product : Product)
 }
 
 class GroseryCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var count: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var name: UILabel!
@@ -24,7 +24,7 @@ class GroseryCell: UICollectionViewCell {
     @IBOutlet weak var addBtn: UIButton!
     var delegate: GroseryCellProtocol?
     var stock : Int?
-    
+    var product : Product? = nil
     var counter = 0{
         didSet{
             if counter == 0{
@@ -50,15 +50,20 @@ class GroseryCell: UICollectionViewCell {
     
     @IBAction func addProduct(_ sender: Any) {
         counter += 1
-        delegate?.productAdded()
+        if let product = product{
+            delegate?.productAdded(product: product)
+        }
     }
     
     @IBAction func deleteProduct(_ sender: Any) {
         counter -= 1
-        delegate?.productDeleted()
+        if let product = product{
+            delegate?.productDeleted(product: product)
+        }
     }
     
     func configure(product : Product){
+        self.product = product
         name.text = product.name
         stock = product.stock
         
@@ -69,7 +74,7 @@ class GroseryCell: UICollectionViewCell {
         if let thumbnailUrl = product.imageUrl{
             let url = URL(string: thumbnailUrl)
             imageView?.sd_setImage(with: url, placeholderImage: UIImage(named: "apploogist"), options: SDWebImageOptions.highPriority, completed: nil)
-
+            
         }
     }
 }
