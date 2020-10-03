@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Grosery List View Controller-->
+        <!--Mini Bakkal-->
         <scene sceneID="uJf-99-Umb">
             <objects>
-                <viewController storyboardIdentifier="GroseryListViewController" id="I2B-VO-UWd" customClass="GroseryListViewController" customModule="MiniBakkal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroseryListViewController" title="Mini Bakkal" id="I2B-VO-UWd" customClass="GroseryListViewController" customModule="MiniBakkal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IOb-mW-JxD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

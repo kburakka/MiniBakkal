@@ -31,6 +31,9 @@
 		B33173B62527850C00328DED /* GroseryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33173B52527850C00328DED /* GroseryList.storyboard */; };
 		B33173B825278B7600328DED /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33173B725278B7600328DED /* AppRouter.swift */; };
 		B33173BA25278BA600328DED /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33173B925278BA600328DED /* AppContainer.swift */; };
+		B33173C22527A24B00328DED /* GroseryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33173C02527A24B00328DED /* GroseryCell.swift */; };
+		B33173C32527A24B00328DED /* GroseryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B33173C12527A24B00328DED /* GroseryCell.xib */; };
+		B33173C825285AED00328DED /* BadgedButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33173C725285AED00328DED /* BadgedButtonItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,9 @@
 		B33173B52527850C00328DED /* GroseryList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroseryList.storyboard; sourceTree = "<group>"; };
 		B33173B725278B7600328DED /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		B33173B925278BA600328DED /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		B33173C02527A24B00328DED /* GroseryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroseryCell.swift; sourceTree = "<group>"; };
+		B33173C12527A24B00328DED /* GroseryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroseryCell.xib; sourceTree = "<group>"; };
+		B33173C725285AED00328DED /* BadgedButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgedButtonItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +171,7 @@
 		B331736525275E0D00328DED /* MiniBakkal */ = {
 			isa = PBXGroup;
 			children = (
+				B33173C42527CA4D00328DED /* Utility */,
 				B33173A72527835000328DED /* Scenes */,
 				B33173A62527832300328DED /* App */,
 				B331739D25276B9D00328DED /* Model */,
@@ -236,6 +243,7 @@
 		B33173A8252783F300328DED /* GroseryList */ = {
 			isa = PBXGroup;
 			children = (
+				B33173BB2527A1F700328DED /* GroseryCell */,
 				B33173A92527845C00328DED /* GroseryListBuilder.swift */,
 				B33173AB2527846D00328DED /* GroseryListContracts.swift */,
 				B33173AD2527847D00328DED /* GroseryListInteractor.swift */,
@@ -245,6 +253,23 @@
 				B33173B52527850C00328DED /* GroseryList.storyboard */,
 			);
 			path = GroseryList;
+			sourceTree = "<group>";
+		};
+		B33173BB2527A1F700328DED /* GroseryCell */ = {
+			isa = PBXGroup;
+			children = (
+				B33173C02527A24B00328DED /* GroseryCell.swift */,
+				B33173C12527A24B00328DED /* GroseryCell.xib */,
+			);
+			path = GroseryCell;
+			sourceTree = "<group>";
+		};
+		B33173C42527CA4D00328DED /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				B33173C725285AED00328DED /* BadgedButtonItem.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +384,7 @@
 				B331737325275E1700328DED /* LaunchScreen.storyboard in Resources */,
 				B33173B62527850C00328DED /* GroseryList.storyboard in Resources */,
 				B331737025275E1700328DED /* Assets.xcassets in Resources */,
+				B33173C32527A24B00328DED /* GroseryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +516,8 @@
 				B33173BA25278BA600328DED /* AppContainer.swift in Sources */,
 				B331739A25276A2A00328DED /* APIRouter.swift in Sources */,
 				B33173AA2527845C00328DED /* GroseryListBuilder.swift in Sources */,
+				B33173C22527A24B00328DED /* GroseryCell.swift in Sources */,
+				B33173C825285AED00328DED /* BadgedButtonItem.swift in Sources */,
 				B33173A52527724E00328DED /* CheckoutReq.swift in Sources */,
 				B33173B2252784BB00328DED /* GroseryListRouter.swift in Sources */,
 				B331736725275E0D00328DED /* AppDelegate.swift in Sources */,
