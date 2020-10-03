@@ -20,6 +20,7 @@ final class GroseryListRouter : GroseryListRouterProtocol{
         switch route {
         case .checkOut(let products):
             let commentsView = BasketBuilder.make(with: products)
+            commentsView.selectedProductsdelegate = view.self as? GroseryListViewController
             view.show(commentsView, sender: nil)
         }
     }

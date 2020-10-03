@@ -8,12 +8,17 @@
 
 import UIKit
 
+protocol SelectedProductsProtocol {
+    func passSelectedProducts(products : [Product])
+}
+
 class GroseryListViewController: UIViewController {
     
     private var products: [Product] = []
     var presenter : GroseryListPresenterProtocol!
     let cartBtn = BadgedButtonItem(with: UIImage(systemName: "cart"))
-    
+    var selectedProductsdelegate: SelectedProductsProtocol?
+
     fileprivate let collectionView:UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
@@ -26,7 +31,7 @@ class GroseryListViewController: UIViewController {
         return cv
     }()
     
-    var selectedProducts: [Product] = []{
+    private var selectedProducts: [Product] = []{
         didSet{
             cartBtn.setBadge(with: selectedProducts.count)
         }
@@ -36,13 +41,13 @@ class GroseryListViewController: UIViewController {
         super.viewDidLoad()
         
         setCollectionView()
-        
         cartBtn.delegate = self
         self.navigationItem.rightBarButtonItem = cartBtn
     }
     
     override func viewWillAppear(_ animated: Bool) {
         presenter.showProducts()
+        self.navigationItem.title = "Mini Bakkal"
     }
     
     func setCollectionView(){
@@ -54,6 +59,12 @@ class GroseryListViewController: UIViewController {
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+    }
+}
+
+extension GroseryListViewController : SelectedProductsProtocol{
+    func passSelectedProducts(products: [Product]) {
+        self.selectedProducts = products
     }
 }
 
@@ -72,7 +83,7 @@ extension GroseryListViewController:GroseryListViewProtocol{
                 self.collectionView.reloadData()
             }
         case .showError(let error):
-            self.showAlert(title: "Error", message: error.localizedDescription)
+            self.showAlert(title: "Hata", message: error.localizedDescription, completionHandler: nil)
         }
     }
 }

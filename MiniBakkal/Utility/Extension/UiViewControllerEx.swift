@@ -8,14 +8,20 @@
 
 import UIKit
 
+typealias CompletionHandler = () -> Void
+
 extension UIViewController {
 
-    func showAlert(title: String, message: String?){
+    func showAlert(title: String, message: String?, completionHandler: CompletionHandler?){
 
         let alertController = UIAlertController(title: title, message: message ?? "", preferredStyle: .alert)
 
         let OKAction = UIAlertAction(title: "Ok", style: .default) { (action:UIAlertAction!) in
-            alertController.dismiss(animated: true, completion: nil)
+            alertController.dismiss(animated: true, completion: {
+                if let completionHandler = completionHandler{
+                    completionHandler()
+                }
+            })
         }
         alertController.addAction(OKAction)
 

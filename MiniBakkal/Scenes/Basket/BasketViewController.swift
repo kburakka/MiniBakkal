@@ -10,6 +10,17 @@ import UIKit
 
 class BasketViewController: UIViewController {
     var presenter : BasketPresenterProtocol!
+    var selectedProductsdelegate: SelectedProductsProtocol?
+    var checkoutRes: CheckoutRes?{
+        didSet{
+            showAlert(title: "UYARI", message: checkoutRes?.message, completionHandler: { () -> Void in
+                self.selectedProducts.removeAll()
+                self.selectedProductsdelegate?.passSelectedProducts(products: self.selectedProducts)
+                self.presenter.closeBasket()
+            })
+        }
+    }
+
     private var basket: ChekoutReq = ChekoutReq(products: [])
     public var selectedProducts : [Product] = []{
         didSet{
@@ -71,8 +82,14 @@ class BasketViewController: UIViewController {
         selectedProducts.removeAll()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Sepet"
+    }
+    
+    
     @objc func closeBasket(){
-        presenter.closeBasket(products: selectedProducts)
+        selectedProductsdelegate?.passSelectedProducts(products: selectedProducts)
+        presenter.closeBasket()
     }
     
     func updateTotalPrice(){
@@ -86,13 +103,31 @@ class BasketViewController: UIViewController {
     }
     
     
-    @IBAction func confirmCart(_ sender: Any) {
+    @IBAction func confirmCard(_ sender: Any) {
+        presenter.confirmCard(products: selectedProducts)
+    }
+}
+
+extension BasketViewController : SelectedProductsProtocol{
+    func passSelectedProducts(products: [Product]) {
+        self.selectedProducts = products
     }
 }
 
 extension BasketViewController: BasketViewProtocol{
     func handleOutput(_ output: BasketPresenterOutput) {
-        
+        switch output {
+        case .setLoading(let isLoading):
+            if isLoading{
+                LoadingView.init(view: view).startAnimation()
+            }else{
+                LoadingView.init(view: view).stopAnimation()
+            }
+        case .showError(let error):
+            self.showAlert(title: "Hata", message: error.localizedDescription, completionHandler: nil)
+        case .confirmCard(let response):
+            self.checkoutRes = response
+        }
     }
 }
 
