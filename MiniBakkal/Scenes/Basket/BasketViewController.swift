@@ -13,7 +13,7 @@ class BasketViewController: UIViewController {
     var selectedProductsdelegate: SelectedProductsProtocol?
     var checkoutRes: CheckoutRes?{
         didSet{
-            showAlert(title: "UYARI", message: checkoutRes?.message, completionHandler: { () -> Void in
+            showAlert(title: "UYARI", message: checkoutRes?.message, completionHandler: { (bool) -> Void in
                 self.selectedProducts.removeAll()
                 self.selectedProductsdelegate?.passSelectedProducts(products: self.selectedProducts)
                 self.presenter.closeBasket()
@@ -79,7 +79,11 @@ class BasketViewController: UIViewController {
     }
     
     @objc func deleteAllProducts(){
-        selectedProducts.removeAll()
+        showDeleteAlert(title: "UYARI", message: "Sepetinizi boşaltmak istediğinize emin misiniz?", completionHandler: { (bool) -> Void in
+            if bool{
+                self.selectedProducts.removeAll()
+            }
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -22,9 +22,8 @@ class GroseryListViewController: UIViewController {
     fileprivate let collectionView:UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        layout.itemSize = CGSize(width: 100, height: 150)
-        layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 0
+        layout.itemSize = CGSize(width: 100, height: 170)
+        layout.minimumLineSpacing = 20
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.register(UINib.init(nibName: "GroseryCell", bundle: nil), forCellWithReuseIdentifier: "GroseryCell")

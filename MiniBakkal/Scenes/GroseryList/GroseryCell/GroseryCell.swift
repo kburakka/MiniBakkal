@@ -45,7 +45,9 @@ class GroseryCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        imageView.layer.borderWidth = 1
+        imageView.layer.borderColor = UIColor.darkGray.cgColor
+        imageView.layer.cornerRadius = 6
     }
     
     func setCounter(counter : Int){
@@ -71,7 +73,7 @@ class GroseryCell: UICollectionViewCell {
         stock = product.stock
         
         if let priceStr = product.price{
-            price.text = "\(priceStr)"
+            price.text = "\(product.currency ?? "")\(priceStr)"
         }
         
         if let thumbnailUrl = product.imageUrl{
