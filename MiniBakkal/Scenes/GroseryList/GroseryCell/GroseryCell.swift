@@ -45,9 +45,9 @@ class GroseryCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        imageView.layer.borderWidth = 1
+        imageView.layer.borderWidth = 0.7
         imageView.layer.borderColor = UIColor.darkGray.cgColor
-        imageView.layer.cornerRadius = 6
+        imageView.layer.cornerRadius = 4
     }
     
     func setCounter(counter : Int){

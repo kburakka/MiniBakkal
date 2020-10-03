@@ -73,7 +73,7 @@ class BasketCell: UITableViewCell {
         
         if let thumbnailUrl = product.imageUrl{
             let url = URL(string: thumbnailUrl)
-            imageView?.sd_setImage(with: url, placeholderImage: UIImage(named: "apploogist"), options: SDWebImageOptions.highPriority, completed: nil)
+            productImage?.sd_setImage(with: url, placeholderImage: UIImage(named: "apploogist"), options: SDWebImageOptions.highPriority, completed: nil)
         }
     }
 }

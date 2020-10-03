@@ -11,6 +11,8 @@ import UIKit
 class BasketViewController: UIViewController {
     var presenter : BasketPresenterProtocol!
     var selectedProductsdelegate: SelectedProductsProtocol?
+    private var basket: ChekoutReq = ChekoutReq(products: [])
+
     var checkoutRes: CheckoutRes?{
         didSet{
             showAlert(title: "UYARI", message: checkoutRes?.message, completionHandler: { (bool) -> Void in
@@ -20,8 +22,7 @@ class BasketViewController: UIViewController {
             })
         }
     }
-
-    private var basket: ChekoutReq = ChekoutReq(products: [])
+    
     public var selectedProducts : [Product] = []{
         didSet{
             updateTotalPrice()
@@ -33,18 +34,19 @@ class BasketViewController: UIViewController {
             if Array(oldValue.keys).count != Array(groupedItems.keys).count{
                 if tableView != nil{
                     tableView.reloadData()
+                    showEmptyMessage()
                 }
             }
         }
     }
-
+    
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalPrice: UILabel!{
         didSet{
             updateTotalPrice()
         }
     }
     
-    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,9 +54,17 @@ class BasketViewController: UIViewController {
         
         setNavigationItems()
     }
-    
+
+    func showEmptyMessage(){
+        if selectedProducts.count == 0{
+            tableView.showMessage(message: "Sepetinizde ürün bulunmamaktadır. ", containerView: tableView)
+        }else{
+            tableView.hideMessage()
+        }
+    }
+
     func setNavigationItems(){
-    
+        
         let deleteBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         deleteBtn.titleLabel?.font = UIFont(name: "Arial-BoldMT", size: 16)
         deleteBtn.setTitle("Sil", for: .normal)
@@ -63,7 +73,7 @@ class BasketViewController: UIViewController {
         deleteBtn.backgroundColor = .clear
         deleteBtn.addTarget(self, action: #selector(deleteAllProducts), for: .touchUpInside)
         let barDeleteBtn = UIBarButtonItem(customView: deleteBtn)
-
+        
         self.navigationItem.leftBarButtonItem = barDeleteBtn
         
         let closeBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
@@ -74,7 +84,7 @@ class BasketViewController: UIViewController {
         closeBtn.backgroundColor = .clear
         closeBtn.addTarget(self, action: #selector(closeBasket), for: .touchUpInside)
         let barCloseBtn = UIBarButtonItem(customView: closeBtn)
-
+        
         self.navigationItem.rightBarButtonItem = barCloseBtn
     }
     
@@ -88,6 +98,7 @@ class BasketViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = "Sepet"
+        showEmptyMessage()
     }
     
     
@@ -98,7 +109,7 @@ class BasketViewController: UIViewController {
     
     func updateTotalPrice(){
         if totalPrice != nil{
-            totalPrice.text = "\(selectedProducts.map({$0.price ?? 0.0}).reduce(0.0, +))"
+            totalPrice.text = "\(selectedProducts.first?.currency ?? "")\(selectedProducts.map({$0.price ?? 0.0}).reduce(0.0, +))"
         }
     }
     
@@ -156,7 +167,6 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("BasketCell", owner: self, options: nil)?.first as! BasketCell
-
         cell.delegate = self
         
         if let products = Array(groupedItems.values)[indexPath.row]{
@@ -169,6 +179,6 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 90
     }
 }

@@ -18,50 +18,54 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYc-lS-Uag">
                                 <rect key="frame" x="0.0" y="776" width="414" height="120"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Toplam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CkM-Lw-GgI">
-                                        <rect key="frame" x="10" y="30" width="56" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Toplam:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CkM-Lw-GgI">
+                                        <rect key="frame" x="20" y="49" width="85" height="22"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWx-E2-JYd">
-                                        <rect key="frame" x="76" y="30" width="228" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="121" y="60" width="158" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaP-p0-eZP">
-                                        <rect key="frame" x="304" y="30" width="95" height="30"/>
+                                        <rect key="frame" x="279" y="40" width="120" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="95" id="uRP-cb-Mw4"/>
+                                            <constraint firstAttribute="height" constant="40" id="NbV-4Z-xy5"/>
+                                            <constraint firstAttribute="width" constant="120" id="uRP-cb-Mw4"/>
                                         </constraints>
-                                        <state key="normal" title="Sepeti Onayla"/>
+                                        <state key="normal" title="Sepeti Onayla">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="confirmCard:" destination="A1g-FA-AXd" eventType="touchUpInside" id="rDX-lg-sPC"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.66927364949316948" green="0.56467269584670043" blue="0.83377185880829019" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.6694261374845919" green="0.79852019082584424" blue="0.90606784321450784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="pWx-E2-JYd" firstAttribute="leading" secondItem="CkM-Lw-GgI" secondAttribute="trailing" constant="10" id="0JU-Qs-lPk"/>
-                                    <constraint firstItem="CkM-Lw-GgI" firstAttribute="leading" secondItem="CYc-lS-Uag" secondAttribute="leading" constant="10" id="27J-JK-uVE"/>
+                                    <constraint firstItem="pWx-E2-JYd" firstAttribute="leading" secondItem="CkM-Lw-GgI" secondAttribute="trailing" constant="16" id="0JU-Qs-lPk"/>
+                                    <constraint firstItem="CkM-Lw-GgI" firstAttribute="leading" secondItem="CYc-lS-Uag" secondAttribute="leading" constant="20" id="27J-JK-uVE"/>
                                     <constraint firstAttribute="trailing" secondItem="NaP-p0-eZP" secondAttribute="trailing" constant="15" id="2SD-a7-rYN"/>
                                     <constraint firstItem="NaP-p0-eZP" firstAttribute="leading" secondItem="pWx-E2-JYd" secondAttribute="trailing" id="Fgz-N6-lDd"/>
-                                    <constraint firstItem="NaP-p0-eZP" firstAttribute="top" secondItem="CYc-lS-Uag" secondAttribute="top" constant="30" id="LUA-e7-IBa"/>
-                                    <constraint firstItem="CkM-Lw-GgI" firstAttribute="top" secondItem="CYc-lS-Uag" secondAttribute="top" constant="30" id="TMt-Fc-vQB"/>
+                                    <constraint firstItem="pWx-E2-JYd" firstAttribute="centerY" secondItem="CYc-lS-Uag" secondAttribute="centerY" id="gg6-8r-gyY"/>
+                                    <constraint firstItem="NaP-p0-eZP" firstAttribute="centerY" secondItem="CYc-lS-Uag" secondAttribute="centerY" id="mFZ-IT-Qkr"/>
                                     <constraint firstAttribute="height" constant="120" id="st8-jx-RgF"/>
-                                    <constraint firstItem="pWx-E2-JYd" firstAttribute="top" secondItem="CYc-lS-Uag" secondAttribute="top" constant="30" id="ul4-OG-DYy"/>
+                                    <constraint firstItem="CkM-Lw-GgI" firstAttribute="centerY" secondItem="CYc-lS-Uag" secondAttribute="centerY" id="yyM-mb-9lM"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N1U-Rd-9eL">
                                 <rect key="frame" x="0.0" y="44" width="414" height="732"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hAi-01-N5m">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="90" id="hAi-01-N5m">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hAi-01-N5m" id="Cjg-Mp-cGd">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
