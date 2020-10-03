@@ -24,8 +24,8 @@ class GroseryListViewController: UIViewController, GroseryListViewProtocol {
     
     var presenter : GroseryListPresenterProtocol!
     private var products: [Product] = []
-    
     let cartBtn = BadgedButtonItem(with: UIImage(systemName: "cart"))
+    
     var totalCounter = 0{
         didSet{
             cartBtn.setBadge(with: totalCounter)
@@ -55,7 +55,11 @@ class GroseryListViewController: UIViewController, GroseryListViewProtocol {
     func handleOutput(_ output: GroseryListPresenterOutput) {
         switch output {
         case .setLoading(let isLoading):
-            print("loading")
+            if isLoading{
+                LoadingView.init(view: view).startAnimation()
+            }else{
+                LoadingView.init(view: view).stopAnimation()
+            }
         case .showProducts(let products):
             self.products = products
             DispatchQueue.main.async {
