@@ -1,0 +1,34 @@
+[
+    {
+        "id": "5f52348e21e9b0e8994df1de",
+        "name": "Süt (1lt)",
+        "price": 15,
+        "currency": "₺",
+        "imageUrl": "https://desolate-shelf-18786.herokuapp.com/images/sut1lt.png",
+        "stock": 2
+    },
+    {
+        "id": "5f52348e21e9b0e8994df1de",
+        "name": "Süt (1lt)",
+        "price": 15,
+        "currency": "₺",
+        "imageUrl": "https://desolate-shelf-18786.herokuapp.com/images/sut1lt.png",
+        "stock": 2
+    },
+    {
+        "id": "5f52348e8299dce0d0e393f8",
+        "name": "Portakal",
+        "price": 5.45,
+        "currency": "₺",
+        "imageUrl": "https://desolate-shelf-18786.herokuapp.com/images/portakal.png",
+        "stock": 4
+    },
+    {
+        "id": "5f52348e8299dce0d0e393f8",
+        "name": "Portakal",
+        "price": 5.45,
+        "currency": "₺",
+        "imageUrl": "https://desolate-shelf-18786.herokuapp.com/images/portakal.png",
+        "stock": 4
+    }
+]

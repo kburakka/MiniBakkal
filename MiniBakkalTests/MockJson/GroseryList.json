@@ -1,0 +1,74 @@
+[
+    {
+        "id": "5f52348e919ff34aed98d349",
+        "name": "Elma",
+        "price": 6.99,
+        "currency": "₺",
+        "imageUrl": "https://desolate-shelf-18786.herokuapp.com/images/elma.png",
+        "stock": 5
+    },
+    {
+        "id": "5f52348e8299dce0d0e393f8",
+        "name": "Portakal",
+        "price": 5.45,
+        "currency": "₺",
+        "imageUrl": "https://desolate-shelf-18786.herokuapp.com/images/portakal.png",
+        "stock": 4
+    },
+    {
+        "id": "5f52348ee6fc340d2feb412b",
+        "name": "Gofret",
+        "price": 2.5,
+        "currency": "₺",
+        "imageUrl": "https://desolate-shelf-18786.herokuapp.com/images/gofret.png",
+        "stock": 2
+    },
+    {
+        "id": "5f52348efdbe73ada0dd8255",
+        "name": "Ceviz(140gr)",
+        "price": 25,
+        "currency": "₺",
+        "imageUrl": "https://desolate-shelf-18786.herokuapp.com/images/ceviz.png",
+        "stock": 1
+    },
+    {
+        "id": "5f52348e5ddcc31446c2af67",
+        "name": "Su (5lt)",
+        "price": 4.95,
+        "currency": "₺",
+        "imageUrl": "https://desolate-shelf-18786.herokuapp.com/images/su5lt.png",
+        "stock": 1
+    },
+    {
+        "id": "5f52348e3fb449847d1f80ea",
+        "name": "Magnum",
+        "price": 6,
+        "currency": "₺",
+        "imageUrl": "https://desolate-shelf-18786.herokuapp.com/images/magnum.png",
+        "stock": 2
+    },
+    {
+        "id": "5f52348e21e9b0e8994df1de",
+        "name": "Süt (1lt)",
+        "price": 15,
+        "currency": "₺",
+        "imageUrl": "https://desolate-shelf-18786.herokuapp.com/images/sut1lt.png",
+        "stock": 2
+    },
+    {
+        "id": "5f52348ebc51749baaf8fbd0",
+        "name": "Ekmek",
+        "price": 1.5,
+        "currency": "₺",
+        "imageUrl": "https://desolate-shelf-18786.herokuapp.com/images/ekmek.png",
+        "stock": 5
+    },
+    {
+        "id": "5f52348ed358b6b505cc28b3",
+        "name": "Yumurta (30'lu)",
+        "price": 35,
+        "currency": "₺",
+        "imageUrl": "https://desolate-shelf-18786.herokuapp.com/images/yumurta30lu.png",
+        "stock": 2
+    }
+]
