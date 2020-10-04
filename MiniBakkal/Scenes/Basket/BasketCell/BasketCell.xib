@@ -55,6 +55,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRd-ef-kcS">
                                 <rect key="frame" x="0.0" y="1" width="19.5" height="17.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="TableDecrement"/>
                                 <state key="normal" backgroundImage="minus.square" catalog="system"/>
                                 <connections>
                                     <action selector="productDeleted:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Qad-jf-jTz"/>
@@ -62,6 +63,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPY-OL-Ftr">
                                 <rect key="frame" x="39.5" y="1" width="20.5" height="17.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="TableIncrement"/>
                                 <state key="normal" backgroundImage="plus.square" catalog="system"/>
                                 <connections>
                                     <action selector="productAdded:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="f33-Ga-gc8"/>
@@ -69,6 +71,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyO-Iq-cV7">
                                 <rect key="frame" x="19.5" y="0.0" width="20" height="20"/>
+                                <accessibility key="accessibilityConfiguration" identifier="TableLabel"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="RiA-7O-ebT"/>
                                 </constraints>

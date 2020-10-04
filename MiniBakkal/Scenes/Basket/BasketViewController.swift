@@ -51,7 +51,7 @@ class BasketViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         groupedItems = Dictionary(grouping: selectedProducts, by: {$0.id!})
-        
+        tableView.accessibilityIdentifier = "TableView"
         setNavigationItems()
     }
 
@@ -71,6 +71,7 @@ class BasketViewController: UIViewController {
         deleteBtn.titleLabel?.textAlignment = .center
         deleteBtn.setTitleColor(.red, for: .normal)
         deleteBtn.backgroundColor = .clear
+        deleteBtn.accessibilityIdentifier = "DeleteAll"
         deleteBtn.addTarget(self, action: #selector(deleteAllProducts), for: .touchUpInside)
         let barDeleteBtn = UIBarButtonItem(customView: deleteBtn)
         
@@ -82,6 +83,7 @@ class BasketViewController: UIViewController {
         closeBtn.titleLabel?.textAlignment = .center
         closeBtn.setTitleColor(.systemBlue, for: .normal)
         closeBtn.backgroundColor = .clear
+        closeBtn.accessibilityIdentifier = "Close"
         closeBtn.addTarget(self, action: #selector(closeBasket), for: .touchUpInside)
         let barCloseBtn = UIBarButtonItem(customView: closeBtn)
         

@@ -27,6 +27,7 @@ class GroseryListViewController: UIViewController {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.register(UINib.init(nibName: "GroseryCell", bundle: nil), forCellWithReuseIdentifier: "GroseryCell")
+        cv.accessibilityIdentifier = "CollectionView"
         return cv
     }()
     
@@ -41,6 +42,7 @@ class GroseryListViewController: UIViewController {
         
         setCollectionView()
         cartBtn.delegate = self
+        cartBtn.accessibilityIdentifier = "cartBtn"
         self.navigationItem.rightBarButtonItem = cartBtn
     }
     

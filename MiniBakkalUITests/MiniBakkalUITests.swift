@@ -9,35 +9,103 @@
 import XCTest
 
 class MiniBakkalUITests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
+    func test_label_when_press_increment_collectionView() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        incrementCollectionCell(app: app)
     }
+    
+    func test_label_when_press_decrement_collectionView() throws {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+        
+        incrementCollectionCell(app: app)
+        decrementCollectionCell(app: app)
+    }
+    
+    func test_label_when_press_increment_table_view() throws {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+        
+        incrementCollectionCell(app: app)
+        navigateToBasket(app: app)
+        incrementTableCell(app: app)
+    }
+    
+    func test_label_when_press_decrement_table_view() throws {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+        
+        incrementCollectionCell(app: app)
+        navigateToBasket(app: app)
+        incrementTableCell(app: app)
+        decrementTableCell(app: app)
+    }
+    
+    func test_navigation_to_basket() throws {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+        navigateToBasket(app: app)
+    }
+    
+    func test_close_Button() throws {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+        incrementCollectionCell(app: app)
+        navigateToBasket(app: app)
+        closeBasket(app: app)
+    }
+    
+    func test_approve_card() throws {
+        let app = XCUIApplication()
+        app.launch()
+        incrementCollectionCell(app: app)
+        navigateToBasket(app: app)
+    }
+    
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                XCUIApplication().launch()
-            }
-        }
+    func approveCard(app :XCUIApplication){
+        app.buttons["Approve"].tap()
+        XCTAssertEqual(app.navigationBars.element.identifier, "AlertView")
+    }
+    func navigateToBasket(app :XCUIApplication){
+        app.buttons["cartBtn"].tap()
+        XCTAssertEqual(app.navigationBars.element.identifier, "Sepet")
+    }
+    func closeBasket(app :XCUIApplication){
+        app.buttons["Close"].tap()
+        XCTAssertEqual(app.navigationBars.element.identifier, "Mini Bakkal")
+    }
+    
+    func incrementCollectionCell(app :XCUIApplication){
+        let button = app.collectionViews["CollectionView"].cells.element(boundBy: 0).buttons["CollectionIncrement"]
+        button.tap()
+        button.tap()
+        let counterLabel = app.collectionViews["CollectionView"].cells.element(boundBy: 0).staticTexts["CollectionLabel"]
+        XCTAssertEqual("2", counterLabel.label)
+    }
+    
+    func incrementTableCell(app :XCUIApplication){
+        app.tables["TableView"].cells.element(boundBy: 0).buttons["TableIncrement"].tap()
+        let counterLabel = app.tables["TableView"].cells.element(boundBy: 0).staticTexts["TableLabel"]
+        XCTAssertEqual("3", counterLabel.label)
+    }
+    func decrementCollectionCell(app :XCUIApplication){
+        app.collectionViews["CollectionView"].cells.element(boundBy: 0).buttons["CollectionDecrement"].tap()
+        let counterLabel = app.collectionViews["CollectionView"].cells.element(boundBy: 0).staticTexts["CollectionLabel"]
+        XCTAssertEqual("1", counterLabel.label)
+    }
+    
+    func decrementTableCell(app :XCUIApplication){
+        app.tables["TableView"].cells.element(boundBy: 0).buttons["TableDecrement"].tap()
+        let counterLabel = app.tables["TableView"].cells.element(boundBy: 0).staticTexts["TableLabel"]
+        XCTAssertEqual("2", counterLabel.label)
     }
 }

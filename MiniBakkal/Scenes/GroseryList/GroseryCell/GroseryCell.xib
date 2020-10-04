@@ -52,6 +52,7 @@
                         <subviews>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUF-a1-drA">
                                 <rect key="frame" x="0.0" y="1" width="20" height="17.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="CollectionDecrement"/>
                                 <state key="normal" backgroundImage="minus.square" catalog="system"/>
                                 <connections>
                                     <action selector="deleteProduct:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Rf5-7b-gdI"/>
@@ -59,6 +60,7 @@
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItI-Yd-EWo">
                                 <rect key="frame" x="20" y="0.0" width="20" height="20"/>
+                                <accessibility key="accessibilityConfiguration" identifier="CollectionLabel"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="rC0-S4-iRM"/>
                                 </constraints>
@@ -68,6 +70,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8Q-sP-ZO0">
                                 <rect key="frame" x="40" y="1" width="20" height="17.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="CollectionIncrement"/>
                                 <state key="normal" backgroundImage="plus.square" catalog="system"/>
                                 <connections>
                                     <action selector="addProduct:" destination="gTV-IL-0wX" eventType="touchUpInside" id="wA1-4m-ZSA"/>

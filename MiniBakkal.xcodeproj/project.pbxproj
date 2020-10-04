@@ -216,7 +216,7 @@
 		B331737C25275E1700328DED /* MiniBakkalTests */ = {
 			isa = PBXGroup;
 			children = (
-				B354AA612529C4C000823579 /* MockJson */,
+				B354AA612529C4C000823579 /* ModelJson */,
 				B331737D25275E1700328DED /* MiniBakkalTests.swift */,
 				B331737F25275E1700328DED /* Info.plist */,
 				B354AA5F2529B06400823579 /* ResourceLoader.swift */,
@@ -330,14 +330,14 @@
 			path = Basket;
 			sourceTree = "<group>";
 		};
-		B354AA612529C4C000823579 /* MockJson */ = {
+		B354AA612529C4C000823579 /* ModelJson */ = {
 			isa = PBXGroup;
 			children = (
 				B354AA592529AFA700823579 /* SelectedProducts.json */,
 				B354AA5B2529AFC200823579 /* CheckoutRes.json */,
 				B354AA5D2529AFE400823579 /* GroseryList.json */,
 			);
-			path = MockJson;
+			path = ModelJson;
 			sourceTree = "<group>";
 		};
 		B391F56A2528767E00DB9743 /* BasketCell */ = {

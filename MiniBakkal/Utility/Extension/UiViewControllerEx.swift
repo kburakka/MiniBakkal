@@ -15,7 +15,7 @@ extension UIViewController {
     func showAlert(title: String, message: String?, completionHandler: CompletionHandler?){
 
         let alertController = UIAlertController(title: title, message: message ?? "", preferredStyle: .alert)
-
+        alertController.restorationIdentifier = "AlertView"
         let OKAction = UIAlertAction(title: "Ok", style: .default) { (action:UIAlertAction!) in
             alertController.dismiss(animated: true, completion: {
                 if let completionHandler = completionHandler{
